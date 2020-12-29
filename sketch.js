@@ -45,8 +45,8 @@ function setup() {
 	World.add(world, ground);
 	 
 	BottomBox = new Box (400, 650, 200, PI);
-	LeftBox = new Box (300, 650, 200, PI/2);
-	RightBox = new Box (500, 700, 200, PI);
+	LeftBox = new Box (300, 650, 100, PI/2);
+	RightBox = new Box (500, 700, 100, PI);
 	
 
 	Engine.run(engine);
