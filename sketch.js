@@ -44,9 +44,9 @@ function setup() {
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
 	World.add(world, ground);
 	 
-	BottomBox = new Box (400, 650, 200, PI);
-	LeftBox = new Box (300, 650, 100, PI/2);
-	RightBox = new Box (500, 700, 100, PI);
+	BottomBox = new Box (400, 650, 200, 90);
+	LeftBox = new Box (300, 610, 100, 0);
+	RightBox = new Box (500, 610, 100, 0);
 	
 
 	Engine.run(engine);
@@ -81,7 +81,6 @@ function draw() {
 
 function keyPressed() {
  if (keyCode === DOWN_ARROW) {
-	
 	Body.setStatic(packageBody, false)
 	packageBody.restitution = 0
   }
