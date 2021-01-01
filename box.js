@@ -5,10 +5,10 @@ class Box {
             isStatic : true,
         }
 
-        this.body = Bodies.rectangle(x, y, height, Box_options);
+        this.body = Bodies.rectangle(x, y, 20, height, Box_options);
         this.width = 20;
         this.height = height;
-        this.angle = angle;
+        Matter.Body.setAngle(this.body, angle);
 
         World.add(world, this.body);
     }
@@ -21,12 +21,10 @@ class Box {
     push();
     translate(pos.x, pos.y)
     rotate(angle);
-
     rectMode(CENTER);
     fill ("red")
     stroke('red');
     rect (0, 0, this.width, this.height);
-   
     pop();
     }
 
