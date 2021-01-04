@@ -67,6 +67,16 @@ function draw() {
   if (keyDown (RIGHT_ARROW)) {
 	helicopterSprite.x= helicopterSprite.x + 10;
   }
+	
+  if (keyDown (LEFT_ARROW)) { 
+	  helicopterSprite.x= helicopterSprite.x - 10; translation={x:-10,y:0} 
+	  Matter.Body.translate(packageBody, translation) 
+  }
+
+  if (keyDown (RIGHT_ARROW)) {
+	helicopterSprite.x= helicopterSprite.x + 10; translation={x:-10,y:0} 
+	Matter.Body.translate(packageBody, translation)
+  }	
  
   rectMode(CENTER);
   packageSprite.x= packageBody.position.x
